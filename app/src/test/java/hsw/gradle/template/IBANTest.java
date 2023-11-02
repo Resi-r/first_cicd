@@ -21,4 +21,16 @@ public class IBANTest {
         IBAN classUnderTest = new IBAN(myIBAN);
         assertEquals(classUnderTest.check(myIBAN), false);
     }
+
+    @Test void IBAN_seltsam_printAsCard() {
+        String myIBAN = "DE68210501700012345678";
+        IBAN classUnderTest = new IBAN(myIBAN);
+        assertEquals(classUnderTest.printAsCard(myIBAN), "Vorname Nachname\nIBAN: " + myIBAN);
+    }
+
+    @Test void IBAN_seltsam_print() {
+        String myIBAN = "DE68210501700012345678";
+        IBAN classUnderTest = new IBAN(myIBAN);
+        assertEquals(classUnderTest.print(myIBAN), "IBAN: " + myIBAN);
+    }
 }
