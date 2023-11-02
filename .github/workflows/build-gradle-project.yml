@@ -12,6 +12,6 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Run JUnit Tests
-        run: ./gradlew test
+        run: ./gradlew test -i
       - name: Run build with Gradle Wrapper
         run: ./gradlew build
