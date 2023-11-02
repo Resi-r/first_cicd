@@ -21,7 +21,7 @@ public class IBAN {
         }
         //System.out.println(IBANnumber);
 
-        if (IBANnumber.startsWith("DE")) {
+        if (!IBANnumber.startsWith("DE")) {
             return false;
         }
 
@@ -76,11 +76,10 @@ public class IBAN {
     }
 
     public String printAsCard(String ibanNumber) {
-        return "";
-        //return "Vorname Nachname\nIBAN: " + ibanNumber;
+        return "Vorname Nachname\nIBAN: " + ibanNumber;
     }
 
     public String print(String string) {
-        return string;
+        return "IBAN: " + string;
     }
 }
