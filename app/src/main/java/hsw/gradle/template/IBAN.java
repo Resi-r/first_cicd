@@ -21,6 +21,10 @@ public class IBAN {
         }
         //System.out.println(IBANnumber);
 
+        if (!IBANnumber.startsWith("DE")) {
+            return false;
+        }
+
         // step 2: move first 4 digits to the end
         String substring1 = IBANnumber.substring(0, 4);
         String substring2 = IBANnumber.substring(4);
